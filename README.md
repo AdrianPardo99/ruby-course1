@@ -34,7 +34,7 @@ Ruby es un lenguaje de programación interpretado el cual trabaja bajo una sinta
   var="#number".to_f
 ```
 # Print/Puts with variables #
-```
+```ruby
   var=foo
 #Form 1
   print "Text and description: #{var}"
