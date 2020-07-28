@@ -45,3 +45,29 @@ Ruby es un lenguaje de programación interpretado el cual trabaja bajo una sinta
 #Form 4
   puts var
 ```
+
+# Array in Ruby #
+```ruby
+#Array instance
+#Form 1
+  array=[foo,foo1,foo2]
+#Form 2
+  array=Array[foo,foo1,foo2]
+
+#Foreach printing elements
+  for i in array
+    puts i
+  end
+
+#Append elements in the array
+  array=array<<foo3
+
+#Remove first element
+  array.shift
+
+#Remove last element
+  array.pop
+
+#Get the n elements of the array in the position p
+  array2=array.slice(p,n)
+```
