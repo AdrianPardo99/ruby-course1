@@ -71,3 +71,29 @@ Ruby es un lenguaje de programación interpretado el cual trabaja bajo una sinta
 #Get the n elements of the array in the position p
   array2=array.slice(p,n)
 ```
+
+## Hash Structure ##
+```ruby
+#The hash table is an structure than contains {key:value}
+  var={key1:value,key2:value1,key3:value2}
+#The keys are unrepeatable
+  var={key1:value,key2:value1,key3:value2,key3:value3}
+#Output of var if puts var: {:key1=>value, :key2=>value1, :key3=>value3}
+
+#Get array of the keys or the values
+  var.keys
+  var.values
+
+#Add other value
+  var.store(:key4,value4)
+  #Or
+  var[:key4]=value4
+
+#Append other hash structure
+  var1={key5:value5,key6:value6}
+  var=var.merge(var1)
+
+#Boolean contains key or value
+  var.has_key?(keyN)
+  var.has_value?(valueN)
+```
