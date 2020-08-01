@@ -174,6 +174,11 @@ hash.each_value do{
     #getters and setters
   end
 
+#Getters in Class
+  def params()
+    params
+  end
+
 #The getters can be substituted by attributes reader
 def ClassFileObject
   attr_reader :params, ...
@@ -182,6 +187,19 @@ def ClassFileObject
     @params=params
   end
 end
+
+#Setters in Class
+  def params=(params)
+    @params=params
+  end
+
+
+#The setters can be substituted by attributes writer
+  attr_writer :params, ...
+
+#The getter and setter can be write if one line substituted attr_reader and attr_writer for:
+  attr_accessor :params, ...
+  #The attr_accessor means getter and setter for params variable(s)
 
 #For create the object we can use or load the file in other or in the same file
 #In the same file:
@@ -195,5 +213,5 @@ end
 #And we can puts or print the params with the next example:
   puts "Params: #{obj.params}"
 
-  
+
 ```
