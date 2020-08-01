@@ -197,7 +197,7 @@ end
 #The setters can be substituted by attributes writer
   attr_writer :params, ...
 
-#The getter and setter can be write if one line substituted attr_reader and attr_writer for:
+#The getter and setter can be write in one line substituted attr_reader and attr_writer:
   attr_accessor :params, ...
   #The attr_accessor means getter and setter for params variable(s)
 
