@@ -162,3 +162,38 @@ hash.each_value do{
     #code
   }
 ```
+
+## Object Oriented Programming ##
+```ruby
+#The basic structure of the class file is:
+  def ClassFileObject
+    def initialize(params)
+      @param1=param1
+      @params=params
+    end
+    #getters and setters
+  end
+
+#The getters can be substituted by attributes reader
+def ClassFileObject
+  attr_reader :params, ...
+  def initialize(params)
+    @param1=param1
+    @params=params
+  end
+end
+
+#For create the object we can use or load the file in other or in the same file
+#In the same file:
+  obj=ClassFileObject.new(params)
+  #It can execute the initialize method
+
+#In other file we can use:
+  load "rootFileDirectory/fileName.rb"
+  obj=ClassFileObject.new(params)
+
+#And we can puts or print the params with the next example:
+  puts "Params: #{obj.params}"
+
+  
+```
