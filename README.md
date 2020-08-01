@@ -97,3 +97,68 @@ Ruby es un lenguaje de programación interpretado el cual trabaja bajo una sinta
   var.has_key?(keyN)
   var.has_value?(valueN)
 ```
+
+## Ciclos ##
+```ruby
+#Loop iterator
+  loop{
+    #code and some condition for break the loop
+    #If the loop iterator doesn't have condition its an infinite loop
+  }
+
+#do
+  loop do
+    #Code and condition
+  end
+
+#until the condition is negative
+  until condition
+    #code
+  end
+
+#while loop
+  while condition
+    #code
+  end
+
+#foreach
+  for i in arr or hash
+    #code
+  end
+
+#each
+  array.each do{
+    |variable_iterator|
+    #code
+  }
+
+#each 2
+  array.each do |variable_iterator|
+    #code
+  end
+
+#each in hash
+  hash.each do{
+    |key,value|  
+    #code
+  }
+
+#each keys in hash
+  hash.each_key do{
+    |key|  
+    #code
+  }
+
+#each values in hash
+hash.each_value do{
+  |value|  
+  #code
+}
+
+#times iterator, is like for i=0;i<N;i++
+  var=N_integer
+  var.times{
+    |i|
+    #code
+  }
+```
