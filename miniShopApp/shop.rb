@@ -16,10 +16,12 @@ require "./listItems.rb"
 
 class Shop
 
+  #Constructor
   def initialize()
     @lista=ListShop.new()
   end
 
+  #Clean the screen
   def clearScreen()
     if !Gem.win_platform?
       #In Windows
@@ -30,6 +32,7 @@ class Shop
     end
   end
 
+  #Menu
   def options_app()
     " ------------------------------ \n"+
     "|     Shoping List Options     |\n"+
@@ -43,6 +46,7 @@ class Shop
     " ------------------------------ \n"
   end
 
+  #Validate if the string is not empty input
   def val_string()
     var=""
     loop{
@@ -56,6 +60,7 @@ class Shop
      var
   end
 
+  #Validate the integer input
   def val_integer_list()
     var=-1
     loop {
@@ -69,6 +74,7 @@ class Shop
      var
   end
 
+  #Validate if we want to remove all the items
   def val_remove_all()
     var=false
     loop {
@@ -87,6 +93,7 @@ class Shop
     var
   end
 
+  #Run method of the application
   def run()
     clearScreen()
     loop {
@@ -126,7 +133,6 @@ class Shop
       clearScreen()
      }
   end
-
 end
 
 shop=Shop.new
