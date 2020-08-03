@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require "./listItems.rb"
 
-#Version 0.1 sin validaciones en entradas de texto
+#Version 1.0 validaciones en entradas de texto
 
 #-------------------------------------------#
 #         Opciones de la aplicación         #
@@ -43,6 +43,50 @@ class Shop
     " ------------------------------ \n"
   end
 
+  def val_string()
+    var=""
+    loop{
+      var=gets.chop
+      if var.empty?
+        print "Please enter a string for the item, try again: "
+      else
+        break
+      end
+     }
+     var
+  end
+
+  def val_integer_list()
+    var=-1
+    loop {
+      var=gets.chop.to_i
+      if var<=0 || var>@lista.items.length
+        print "Please enter a correct number, try again: "
+      else
+        break
+      end
+     }
+     var
+  end
+
+  def val_remove_all()
+    var=false
+    loop {
+      print "Are you wish to remove all the items? (y/n) "
+      val=gets.chop
+      if val=="y"
+        var=true
+        break
+      elsif val=="n"
+        var=false
+        break
+      else
+        puts "Please enter a correct option, try again."
+      end
+     }
+    var
+  end
+
   def run()
     clearScreen()
     loop {
@@ -52,21 +96,25 @@ class Shop
       case opt
       when 1
         print "Please enter the name of the item: "
-        @lista.add_item(gets.chomp)
+        @lista.add_item(val_string())
       when 2
         @lista.show_all
         if @lista.items.length!=0
           print "Enter the index of the item: "
-          @lista.remove_by_index(gets.chomp.to_i)
+          @lista.remove_by_index(val_integer_list())
         end
       when 3
         @lista.show_all
         if @lista.items.length!=0
           print "Enter the index of the item: "
-          @lista.check_by_index(gets.chomp.to_i)
+          @lista.check_by_index(val_integer_list)
         end
       when 4
-        @lista.remove_all
+        if @lista.items.length!=0
+          if val_remove_all
+            @lista.remove_all
+          end
+        end
       when 5
         @lista.show_all
       when 6
