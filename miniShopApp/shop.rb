@@ -11,7 +11,7 @@ require "./listItems.rb"
 # 3- Check item by index                    #
 # 4- Remove all items                       #
 # 5- Show all items                         #
-# 6- Exit application                        #
+# 6- Exit application                       #
 #-------------------------------------------#
 
 class Shop
