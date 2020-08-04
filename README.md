@@ -271,16 +271,6 @@ end
 
 ```
 
-### Mini shopping list project ###
-The content in the folder miniShopApp, contain a simple project with OOP, and with all the single little codes that we learn, and we don't use load
-```ruby
-load "file.rb"
-```
-We use require
-```ruby
-require "path/file.rb"
-```
-
 ## Blocks in Ruby ##
 ```ruby
 #We can write methods and blocks of code in the same line for use latter in some especific work
@@ -328,4 +318,14 @@ require "path/file.rb"
     end
   end
 
+```
+
+### Mini shopping list project ###
+The content in the folder miniShopApp, contain a simple project with OOP, and with all the single little codes that we learn, and we don't use load
+```ruby
+load "file.rb"
+```
+We use require
+```ruby
+require "path/file.rb"
 ```
