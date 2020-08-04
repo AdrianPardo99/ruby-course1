@@ -258,7 +258,7 @@ We use require
 require "path/file.rb"
 ```
 
-##Blocks in Ruby##
+## Blocks in Ruby ##
 ```ruby
 #We can write methods and blocks of code in the same line for use latter in some especific work
   def method(params)
