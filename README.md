@@ -257,3 +257,52 @@ We use require
 ```ruby
 require "path/file.rb"
 ```
+
+##Blocks in Ruby##
+```ruby
+#We can write methods and blocks of code in the same line for use latter in some especific work
+  def method(params)
+    if block_given? #<-It means if method is using by a block of code
+      #code and more code
+      yield something #<- Like the return instance, yield means return in the variable in the block code
+    else
+      #code about the method
+    end
+  end
+
+#We can use the method...
+  method(params)
+  #Or
+  method params
+
+#But the block...
+
+  #Form 1
+  method(params){
+    |var-that-override-in-the-yield-instance|
+    #Code and more code    
+  }
+
+  #Form 2
+  method(params) do
+    |var-that-override-in-the-yield-instance|
+    #Code and more code    
+  end
+
+  #Form 3
+  method params do
+    |var-that-override-in-the-yield-instance|
+    #Code and more code    
+  end
+
+#We can rename the yield instance in the next example
+def method(params,&alias_yield)
+  if block_given? #<-It means if method is using by a block of code
+    #code and more code
+    alias_yield.call something #<- Like the return instance, yield means return in the variable in the block code
+  else
+    #code about the method
+  end
+end
+
+```
