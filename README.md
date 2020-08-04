@@ -1,8 +1,31 @@
-## Repositorio de un curso de Ruby con sintaxis basica y algunos programas de ejemplificación ##
+# Repositorio de un curso de Ruby con sintaxis basica y algunos programas de ejemplificación #
 
 Ruby es un lenguaje de programación interpretado el cual trabaja bajo una sintaxis parecida a la de Python
 
-# Hello world #
+# Ruby instalación #
+
+__Windows__
+
+Tan simple y sencillo como descargar aceptar, aceptar y ya, en la página de Ruby [click aquí](https://www.ruby-lang.org/en/downloads/), para finalmente añadir la variables de entorno de ruby
+
+__Linux__
+
+_Debian_
+```bash
+sudo apt install ruby rubygems -y
+```
+
+_RedHat_
+```bash
+sudo yum install ruby-devel rubygems -y
+#Or in Fedora
+sudo dnf install ruby-devel rubygems -y
+```
+__MACOSx__
+
+Descargar e instalar el archivo de instalación de la página de Ruby [click aquí](https://www.ruby-lang.org/en/downloads/)
+
+## Hello world ##
 ```ruby
 #Form 1
   puts "Hello world"
@@ -14,14 +37,14 @@ Ruby es un lenguaje de programación interpretado el cual trabaja bajo una sinta
   print("Hello world\n")
 ```
 
-# Input text with/without \n #
+## Input text with/without \n ##
 ```ruby
 #Func gets with \n
   var=gets
 #Func without \n
   var=gets.chomp
 ```
-# Casting/Parsing string to integer/float #
+## Casting/Parsing string to integer/float ##
 ```ruby
 #Read value from standar input and casting/parsing int
   var=gets.chomp.to_i
@@ -33,7 +56,7 @@ Ruby es un lenguaje de programación interpretado el cual trabaja bajo una sinta
   #or
   var="#number".to_f
 ```
-# Print/Puts with variables #
+## Print/Puts with variables ##
 ```ruby
   var=foo
 #Form 1
@@ -46,7 +69,7 @@ Ruby es un lenguaje de programación interpretado el cual trabaja bajo una sinta
   puts var
 ```
 
-# Array in Ruby #
+## Array in Ruby ##
 ```ruby
 #Array instance
 #Form 1
