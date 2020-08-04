@@ -296,13 +296,13 @@ require "path/file.rb"
   end
 
 #We can rename the yield instance in the next example
-def method(params,&alias_yield)
-  if block_given? #<-It means if method is using by a block of code
-    #code and more code
-    alias_yield.call something #<- Like the return instance, yield means return in the variable in the block code
-  else
-    #code about the method
+  def method(params,&alias_yield)
+    if block_given? #<-It means if method is using by a block of code
+      #code and more code
+      alias_yield.call something #<- Like the return instance, yield means return in the variable in the block code
+    else
+      #code about the method
+    end
   end
-end
 
 ```
