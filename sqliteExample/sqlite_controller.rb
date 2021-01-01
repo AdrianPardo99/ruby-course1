@@ -1,9 +1,11 @@
 #!/usr/bin/env ruby
 
+require "sqlite3"
+
 class SQLITE_CONTROLLER
   def initialize(name_db="")
     @name_db=name_db
-    @db=nil
+    @db=SQLite3::Database.open(@name_db)
     @stm=nil
   end
 
